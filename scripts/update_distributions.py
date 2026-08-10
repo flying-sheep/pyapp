@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import os
+import sys
 from collections import defaultdict
 from collections.abc import Callable, Generator
 from contextlib import suppress
@@ -181,4 +182,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        sys.exit(-2)
